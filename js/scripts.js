@@ -1,4 +1,4 @@
-var vowels = ["a","i","u","e","o"];
+// var vowels = ["a","i","u","e","o"];
 
 $(document).ready(function(){
   $("#input-form").submit(function(event){
@@ -24,8 +24,6 @@ $(document).ready(function(){
     }
     // console.log(score)
     $("#result").append(score);
-
-    
     // userInputLetters.forEach(function(userInputLetter){
     //   var inputVowel = [];
     //   if (userInputLetter === "a"){
@@ -34,4 +32,9 @@ $(document).ready(function(){
     //   console.log(inputVowel);
     // });  
   });
+  $("#btn-reset").click(function(event){
+    event.preventDefault();
+    $("#result").empty();
+    $("#user-input").val("");
+  })
 });
